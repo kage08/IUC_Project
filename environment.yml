@@ -1,0 +1,24 @@
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy=1.24
+  - scipy=1.9
+  - matplotlib=3.6
+  - pandas
+  - scikit-learn=1.2
+  - einops
+  - polars=0.16
+  - aim=3.16
+  - jupyterlab
+  - tqdm
+  - black
+  - pylint
+  - pytorch=2.0
+  - torchvision=0.15
+  - pytest
+  - isort
+  - flake8
