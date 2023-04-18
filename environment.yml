@@ -22,3 +22,9 @@ dependencies:
   - pytest
   - isort
   - flake8
+  - black
+  - py-xgboost
+  - captum
+  - shap
+  - pip:
+    - lime
