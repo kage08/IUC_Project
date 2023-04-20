@@ -2,7 +2,7 @@
 ---
 ![image](https://user-images.githubusercontent.com/14800775/233230348-7e5ec137-2d84-4661-bb45-bdc1924dc8db.png)
 
-[Paper](https://drive.google.com/file/d/1Gz9OQfuu2qGvD0H6kER18pgWzkVeTVlX/view?usp=sharing)
+[Paper](https://drive.google.com/file/d/1Gz9OQfuu2qGvD0H6kER18pgWzkVeTVlX/view?usp=sharing), [Poster](https://github.com/kage08/IUC_Project/blob/main/Poster.pdf)
 
 ## Abstract
 
