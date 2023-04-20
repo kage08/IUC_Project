@@ -11,7 +11,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
-from xgboost import XGBRegressor
 
 from datasets import SingleEventDataset
 from utils import STORM_TIME_FILE, census_cols
@@ -26,6 +25,7 @@ def train_pred_model(model, X_train, y_train, X_test, y_test):
     y_pred = model.predict(X_test)
     rmse = np.sqrt(mean_squared_error(y_test, y_pred))
     return y_pred, rmse
+
 
 scores = {}
 scores["LR"] = {}
@@ -63,7 +63,6 @@ for event in events:
         continue
     scores["LR"][event] = rmse
 
-
     # Plot the coefficients
     import matplotlib.pyplot as plt
 
@@ -77,7 +76,6 @@ for event in events:
     min_coeff = np.min(model_coeffs)
     model_coeffs = (model_coeffs - min_coeff) / (max_coeff - min_coeff)
 
-
     scores["LR_Coeff"][event] = model_coeffs
 
 # Average all coeffs
@@ -87,9 +85,11 @@ avg_coeffs = np.mean(coeffs, axis=0)
 # Plot the average coefficients
 import matplotlib.pyplot as plt
 
-plt.figure(figsize=(10, 10))
+plt.figure(figsize=(10, 24))
 plt.barh(census_cols, avg_coeffs)
-plt.savefig("LR/avg.png")
+# incease the font size
+plt.rcParams.update({"font.size": 22})
+plt.savefig("LR/avg.png", bbox_inches="tight")
 
 
 import pickle

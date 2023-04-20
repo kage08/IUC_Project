@@ -5,9 +5,9 @@ channels:
 dependencies:
   - python=3.10
   - pip
-  - numpy=1.24
-  - scipy=1.9
-  - matplotlib=3.6
+  - numpy
+  - scipy
+  - matplotlib
   - pandas
   - scikit-learn=1.2
   - einops
@@ -23,7 +23,6 @@ dependencies:
   - isort
   - flake8
   - black
-  - py-xgboost
   - captum
   - shap
   - pip:
